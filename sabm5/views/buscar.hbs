@@ -1,0 +1,33 @@
+<div class="container-busca">
+
+
+  {{#each rows}}
+
+
+
+  <div class="searched-item-alimento">
+
+
+
+
+    Nome:<a href="/exclusivo/{{this.id}}"> {{this.nome}} </a><br>
+
+
+    <div class="searched-item-alimento-item">
+
+      <div class="searched-item-alimento-right">
+        <img src={{this.imagem}} alt="User Profile">
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+  {{/each}}
+
+</div>

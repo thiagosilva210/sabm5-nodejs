@@ -1,0 +1,30 @@
+<div class="center">
+    <div id='login' class="formulario login">
+        <div class="header">
+            <h1>Login</h1>
+        </div>
+        <form action='/login' method='post' class="formulario">
+
+            <div class="container logindiv">
+
+                <div class="inp">
+                    <label>Username : </label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                </div>
+
+                <div class="inp">
+                    <label>Password : </label>
+                    <input type="password" placeholder="Enter Password" name="pw" required>
+                </div>
+
+                {{#if messages.error}}
+                <div class="mensagem-erro">{{messages.error}}</div>
+                {{/if}}
+                <div class="loginbutton">
+                    <button class="singlebutton btn btn-primary " formaction="/login" type="submit">Login</button>
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

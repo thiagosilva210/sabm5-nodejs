@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.A.B.M.</title>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/ebe07336e8.js" crossorigin="anonymous"></script>
+
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/exclusivo.css" />
+    <link rel="stylesheet" href="/css/buscar.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+    <!----------------------------- inicio navbar ------------------------------------->
+
+    <nav class="navbar">
+
+        <div class="navbar-center">
+
+            <div class="leWindow-btn">
+
+                <i class="fas fa-bars" id="leWindow-btn-1"></i>
+
+
+
+                <a href="/" class="nav-icon-1">
+
+                    <h1>S.A.B.M.</h1>
+                </a>
+
+            </div>
+
+
+
+
+
+
+            <form class="formHeader" action="/buscar" method="POST">
+                <input class="searchInput" type="search" placeholder="Search" name="search" />
+
+
+
+                <button class="button-search" type="submit">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+
+                </button>
+
+            </form>
+
+
+
+
+
+
+
+            <div class="link-para-login-btn">
+                <a href="/login">Faça login como um administrador</a>
+
+
+
+            </div>
+
+
+
+
+
+    </nav>
+
+    <!----------------------------- end navbar ------------------------------------->
+
+    <!----------------------------- início da sidebar --------------------------------->
+
+
+    <div class="leWindow-overlay">
+
+        <div class="leWindow">
+
+            <span class="close-leWindow">
+                <i class="fas fa-window-close"></i>
+
+            </span>
+            <header>Categorias</header>
+
+
+
+            <ul>
+
+                <li><a href="/buscar/rico em proteína">Rico em proteínas</a></li>
+                <li><a href="/buscar/frutas">Frutas</a></li>
+                <li><a href="/buscar/não recomendado">Não recomendado</a></li>
+                <li><a href="/buscar/legumes">Legumes</a></li>
+
+
+            </ul>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-------------------------------------- fim da sidebar -------------------------------->
+
+
+
+
+
+
+
+
+
+    {{{body}}}
+
+
+    <footer>
+
+        All rights reserved
+
+
+
+    </footer>
+</body>
+<script src="/js/ap.js"></script>
+
+</html>

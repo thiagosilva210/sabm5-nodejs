@@ -1,0 +1,410 @@
+
+
+:root {
+ 
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+  min-height: 100%;
+  
+  
+}
+
+
+/* --------------- Navbar ---------------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  padding: 30px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  background-color: #041629;
+  z-index: 1;
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1270px;
+  margin: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.leWindow-btn {
+  flex: 0 0 20%;
+  min-width: 10rem;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.leWindow-btn i {
+  color: white;
+  margin-right: 20px;
+  font-size: 2rem;
+  left: 0;
+  width: 10%;
+  cursor: pointer;
+}
+
+.formHeader {
+  
+  flex: 0 0 45%;
+  display: flex;
+  height: 2.8rem;
+  padding-top: 18px;
+  
+  align-items: center;
+
+  width: 90%;
+}
+
+
+.formulario-pesquisa-2{
+  
+  
+    flex: 0 0 45%;
+    display: flex;
+    height: 2.8rem;
+    padding-top: 18px;
+    
+    align-items: center;
+  
+    width: 90%;
+    margin-left: 3rem;
+    margin-top: 2rem;
+  margin-bottom: 6rem;
+}
+
+.container-resultado-pesquisa{
+  margin-left: 3rem;
+ width: 80%;
+}
+
+.resultado-pesquisa{
+  
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.barra-pesquisa-2{
+
+  border: 1px solid gray;
+  width: 60%;
+  padding: 10px;
+}
+
+.searchInput {
+  
+  border: none;
+  width: 90%;
+  outline: none;
+  padding: 10px;
+}
+
+.button-search {
+  width: 2rem;
+  min-width: 2rem;
+  cursor: pointer;
+  background-color:  rgb(14, 211, 211);
+
+  border-radius: 2px;
+  border: none;
+}
+
+.button-search svg {
+  color: white;
+}
+
+.msgLoginDiv {
+  color: white;
+  padding-top: 10px;
+  display: flex;
+  flex: 0 0 17%;
+}
+
+.msgLoginDiv a {
+  color: #f09d51;
+  display: flex;
+  flex: 0 0 17%;
+}
+
+.fazerLogout {
+  color: var(--primaryColor);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.nav-icon-2 {
+  font-size: 2rem;
+
+  cursor: pointer;
+}
+
+.nav-icon-1 {
+  text-decoration: none;
+}
+
+.nav-icon-1 h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.nav-icon-1 h1:hover, .link-para-login-btn a:hover{
+  color: rgb(14, 211, 211);
+  cursor: pointer;
+}
+
+.link-para-login-btn{
+
+  
+  color: white;
+  padding-top: 18px;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+
+.link-para-login-btn a{
+
+  text-decoration: none;
+  color: white;
+  
+  
+  
+
+
+}
+
+.search-icon {
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* --------------- End of Navbar ---------------- */
+
+.menu-admin{
+  position: sticky;
+  background-color: rgb(14, 211, 211);
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  
+  
+  margin-bottom: 4rem;  
+  
+}
+
+.menu-admin a{
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 3rem;
+  z-index: 3;
+  transition: 0.6s;
+
+
+}
+
+.menu-admin a:hover{
+
+  background-color: rgb(5, 73, 85);
+
+}
+
+
+
+/* --------------- leWindow ---------------- */
+
+.leWindow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transition: var(--mainTransition);
+  background: rgba(20, 20, 20, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+
+.leWindow {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background-color: #203040;
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(-100%);
+}
+
+.leWindow header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background-color: #08141f;
+  user-select: none;
+}
+.leWindow ul a {
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.6s;
+}
+.leWindow ul li {
+  list-style-type: none;
+}
+
+ul li:hover a {
+  padding-left: 80px;
+  background-color: rgb(14, 211, 211);
+}
+
+.close-leWindow {
+  z-index: 1111;
+  margin-left: 350px;
+  align-items: right;
+  font-size: 30px;
+  color: rgb(14, 211, 211);;
+  padding: 4px 9px;
+  cursor: pointer;
+}
+
+.showLeWindow {
+  transform: translateX(0);
+}
+
+@media screen and (min-width: 768px) {
+  .leWindow {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+.transparentBcg {
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+/* --------------- fim de leWindow ---------------- */
+
+.dvExclusive {
+  
+  margin-top: 200px;
+  
+}
+
+.dvExclusive h1{
+  text-align: center;
+}
+
+.tsideExclusivo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+
+.exclusivo {
+  flex: 0 0 25%;
+  padding: 2rem;
+ 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+  margin-bottom: 3rem;
+  
+}
+
+.exclusivo img {
+  height: 100%;
+  width: 90%;
+}
+
+
+.adi1{
+ 
+  margin-bottom: 300px;
+  margin-left: 4rem;
+}
+
+
+
+.msg-inform{
+  margin-left: 4rem;
+}
+
+
+footer{
+
+  
+    bottom: 0;
+    position: static;
+    margin-top: 300px;
+    background-color:  #010d1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    height: 150px;
+    width: 100%;
+  
+
+}
+
+
+.mensagem-erro{
+  color: red;
+  margin-bottom: 1rem;
+}
+
+
+.msg-alert-success{
+margin: 2rem;
+}

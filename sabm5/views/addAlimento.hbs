@@ -1,0 +1,73 @@
+<div class="menu-admin">
+    <a href="/admin">home</a>
+    <a href="/pesquisar">buscar</a>
+    <a href="/addAlimento">cadastrar</a>
+    <a href="/logout">Sair/Fazer logout</a>
+</div>
+
+
+
+{{#if alert}}
+<div class="msg-alert-success" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+
+<div class="cadastrarAlimento">
+    <div class="header">
+        <h2>Criar alimento</h2>
+    </div>
+    <form method="POST" action="/addAlimento" encType="multipart/form-data" class="formulario">
+        <div class="inp">
+            <label for="floatingInput">Nome:</label>
+            <input type="text" id="floatingInput" value="{{this.nome}}" placeholder="Nome" name="nome">
+
+
+        </div>
+        <div class="inp">
+
+            <label for="floatingInput">categoria:</label>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.categoria}}"
+                placeholder="Categoria" name="categoria">
+
+
+        </div>
+
+        <div class="inp">
+            <label for="floatingInput">Imagem:</label>
+            <img src="{{this.imagem}}" width="100" />
+            <input type="file" name="imagem" accept="image/*" />
+
+
+        </div>
+
+
+
+
+        <label for="comments">Descrição: </label>
+        <div class="inp">
+
+
+            <textarea class="form-control" placeholder="Descrição..." id="descricao"
+                name="descricao">{{this.descricao}}</textarea>
+
+
+        </div>
+
+        <div class="inp">
+
+            <label for="floatingInput">Fontes</label>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.fontes}}" placeholder="fontes"
+                name="fontes">
+
+
+        </div>
+
+
+        <div class="col-12 d-grid">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>

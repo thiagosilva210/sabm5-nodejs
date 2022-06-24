@@ -1,0 +1,93 @@
+<div class="menu-admin">
+    <a href="/admin">home</a>
+    <a href="/pesquisar">buscar</a>
+    <a href="/addAlimento">cadastrar</a>
+    <a href="/logout">Sair/Fazer logout</a>
+</div>
+
+
+{{#if alert}}
+<div class="msg-alert-success" role="alert">
+    {{alert}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+
+
+{{#each rows}}
+
+
+
+<div class="cadastrarAlimento" id="modal-update">
+    <div class="header">
+        <h2>Editar alimento</h2>
+    </div>
+    <form method="POST" action="/editAlimento/{{this.id}}" encType="multipart/form-data" class="formulario">
+
+
+        <div class="inp">
+            <label for="floatingInput">Nome</label>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.nome}}" placeholder="Nome"
+                name="nome">
+        </div>
+
+        <div class="inp">
+
+            <label for="floatingInput">categoria:</label>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.categoria}}"
+                placeholder="Categoria" name="categoria">
+
+
+        </div>
+
+        <div class="inp">
+            <p>imagem atual: {{this.imagem}}</p>
+            <p>{{this.valor}}</p>
+
+            <input name="imagem" value="{{this.imagem}}" />
+
+            <img src="{{this.imagem}}" width="100" />
+
+
+            <input type="file" name="sampleFile" accept="image/*" />
+
+        </div>
+
+
+        <div class="inp">
+
+            <label for="comments">Descrição:</label><br>
+            <textarea class="form-control" placeholder="Descrição..." id="descricao"
+                name="descricao">{{this.descricao}}</textarea>
+
+
+        </div>
+
+        <div class="inp">
+
+            <label for="floatingInput">Fontes</label>
+            <input type="text" class="form-control" id="floatingInput" value="{{this.fontes}}" placeholder="fontes"
+                name="fontes">
+
+
+        </div>
+
+
+        <div class="inp">
+            Nome: <a href="/exclusivo/{{this.id}}"> {{this.nome}} </a><br>
+
+        </div>
+
+        <input type="submit" class="btn btn-info">
+
+
+
+
+
+    </form>
+
+</div>
+
+
+{{/each}}
